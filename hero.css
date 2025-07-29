@@ -1,0 +1,80 @@
+body {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+
+.hero-section {
+    /* padding: 100px 20px 60px; */
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    animation: scaleIn 1.2s ease-out;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-top: 15px;
+    color: #e0e0e0;
+    min-height: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid white;
+    font-family: monospace;
+    margin-bottom: 30px;
+    animation: blink 1s step-end infinite;
+}
+
+.hero-img {
+    max-width: 500px;
+    animation: float 5s ease-in-out infinite;
+}
+
+
+/* Animations */
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+    0%,
+    100% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: white;
+    }
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+
+/* Fade-in on scroll */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>نتیجہ کارڈ</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    .designer-credit {
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        margin-top: 40px;
+        color: #555;
+        text-align: center;
+        border-top: 1px solid #ccc;
+        padding-top: 10px;
+        font-style: italic;
+        letter-spacing: 0.5px;
+        font-weight: bold;
+    }
+  </style>
+</head>
+<body class="result-card">
+  <div class="card">
+    <img src="{{ url_for('static', filename='darul_uloom.webp') }}" class="school-logo">
+    <h1 style="font-family: 'Noto Nastaliq Urdu', serif; font-size: 28px;">
+        دارالعلوم مظہرِ اسلام مسجد بی بی جی صاحبہ بہاریپور ڈھال
+    </h1>
+
+    <h3 style="word-spacing:10px;">Test Exam Of 2025</h3>
+    <hr>
+
+    <div class="student-info">
+      <p><strong>Position:</strong> ---- {{ student.position }}</p>
+      <p><strong>Name:</strong> ---- {{ student.name }}</p>
+      <p><strong>Roll No:</strong> ---- {{ student.roll }}</p>
+    </div>
+
+    <table class="marks-table" style="direction: ltr; text-align: left;">
+      <tr><th>Marks</th><th>Subjects</th></tr>
+      <tr><td>{{ student.subjects[0] }}</td><td style="word-spacing:4px;">Qur'an Sharif</td></tr>
+      <tr><td>{{ student.subjects[1] }}</td><td>Urdu</td></tr>
+      <tr><td><strong>{{ student.total }}</strong></td><td><strong>Total</strong></td></tr>
+    </table>
+
+    <p class="encourage" style="direction: ltr; text-align: left;">
+      <strong>🎉 Congratulations</strong><br>
+      Your success reflects your hard work, dedication, and sincerity.<br>
+      Keep pursuing the journey of knowledge. May Allah bless you with beneficial knowledge and a bright future. Ameen.
+    </p>
+
+    <div class="signature">
+        <p><b>Principal</b></p>
+        <p style="font-family: 'Noto Nastaliq Urdu', serif; font-size: 23px; text-decoration: underline;">
+            محمد نعمان رضا
+        </p>
+    </div>
+
+    <a href="/">🔁 Search Again</a>
+    <p class="designer-credit">
+        This result card is proudly designed by <span style="text-decoration: underline;">Noman Raza Mazhari</span>.
+    </p>
+  </div>
+</body>
+</html>

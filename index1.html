@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<section class="hero-section text-center">
+  <div class="container fade-in">
+    <h1 class="hero-title">🎓 Global Institute of Engineering</h1>
+    <p class="hero-subtitle" id="typingText"></p>
+
+    <div class="hero-image mt-4">
+      <img src="{{ url_for('static', filename='images/hero_image.jpg') }}" alt="Laptop and Books" class="hero-img img-fluid">
+    </div>
+
+    <a href="/register" class="btn btn-success btn-lg mt-4">📥 Get Admission</a>
+    
+{% endblock  %}
